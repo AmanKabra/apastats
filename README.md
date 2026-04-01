@@ -8,6 +8,24 @@ A second, deeper problem motivates this package: the absence of transparency in 
 
 Third, a disproportionate share of researcher time goes to formatting rather than thinking. Every decimal place, leading zero, significance star, and table border in an APA 7th edition manuscript must follow precise rules, and deviations invite revision requests or desk rejection. `apastats` enforces these rules programmatically. Every analysis returns a formatted plain text table, a structured result object with raw statistics, a `.report()` method that generates copy paste in text reporting strings, and direct export to Word, LaTeX, or CSV. The goal is simple: researchers should spend their time on content, not on counting decimal places.
 
+## Citation
+
+If you use `apastats` in published research, please cite it as:
+
+> Kabra, A. (2026). *apastats: APA 7th edition compliant statistical analyses for organizational science* (Version 0.1.3) [Computer software]. https://github.com/AmanKabra/apastats
+
+BibTeX:
+
+```bibtex
+@software{kabra2026apastats,
+  author = {Kabra, Aman},
+  title = {apastats: APA 7th Edition Compliant Statistical Analyses for Organizational Science},
+  year = {2026},
+  url = {https://github.com/AmanKabra/apastats},
+  version = {0.1.3}
+}
+```
+
 ## Installation
 
 ```bash

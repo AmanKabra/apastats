@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software in published research, please cite it as below."
+title: "apastats: APA 7th Edition Compliant Statistical Analyses for Organizational Science"
+authors:
+  - family-names: Kabra
+    given-names: Aman
+type: software
+version: 0.1.3
+date-released: 2026-03-31
+url: "https://github.com/AmanKabra/apastats"
+repository-code: "https://github.com/AmanKabra/apastats"
+license: MIT
+keywords:
+  - apa
+  - statistics
+  - organizational-behavior
+  - psychology
+  - mediation
+  - moderation
+  - confirmatory-factor-analysis
+preferred-citation:
+  type: software
+  authors:
+    - family-names: Kabra
+      given-names: Aman
+  title: "apastats: APA 7th edition compliant statistical analyses for organizational science"
+  year: 2026
+  version: 0.1.3
+  url: "https://github.com/AmanKabra/apastats"
