@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apastats"
-version = "0.1.0"
+version = "0.1.1"
 description = "APA 7th edition compliant statistical tables and analyses for organizational science research, following Journal of Applied Psychology (JAP) norms."
 readme = "README.md"
 license = "MIT"
