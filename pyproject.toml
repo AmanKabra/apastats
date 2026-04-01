@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apastats"
-version = "0.1.4"
+version = "0.1.5"
 description = "APA 7th edition compliant statistical analyses for organizational science. Transparent defaults, complete parameter reporting, publication-ready output."
 readme = "README.md"
 license = "MIT"

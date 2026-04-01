@@ -8,6 +8,10 @@ A second, deeper problem motivates this package: the absence of transparency in 
 
 Third, a disproportionate share of researcher time goes to formatting rather than thinking. Every decimal place, leading zero, significance star, and table border in an APA 7th edition manuscript must follow precise rules, and deviations invite revision requests or desk rejection. `apastats` enforces these rules programmatically. Every analysis returns a formatted plain text table, a structured result object with raw statistics, a `.report()` method that generates copy paste in text reporting strings, and direct export to Word, LaTeX, or CSV. The goal is simple: researchers should spend their time on content, not on counting decimal places.
 
+## Disclaimer
+
+`apastats` is provided as is, without warranty of any kind. While the package includes an extensive test suite (191 tests at the time of writing) and every effort has been made to ensure correctness, errors in statistical software are always possible. Users are strongly encouraged to cross verify results against at least one independent tool (e.g., PROCESS for SPSS, lavaan for R, jamovi) before relying on any output for publication. This is standard practice in quantitative research, and it is what the author does in his own work. The project is under active development and building rapidly, but it has not yet undergone external audit. By using this software, you accept full responsibility for verifying the accuracy of any results it produces. The author assumes no liability for errors, omissions, or consequences arising from the use of this package.
+
 ## Citation
 
 If you use `apastats` in published research, please cite it as:
