@@ -7,10 +7,10 @@ name = "apastats"
 version = "0.1.0"
 description = "APA 7th edition compliant statistical tables and analyses for organizational science research, following Journal of Applied Psychology (JAP) norms."
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.9"
 authors = [
-    {name = "Aman Kumar"},
+    {name = "Aman Kabra"},
 ]
 keywords = [
     "apa", "jap", "organizational-behavior", "psychology",
@@ -19,7 +19,6 @@ keywords = [
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Topic :: Scientific/Engineering",
 ]
