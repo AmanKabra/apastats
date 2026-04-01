@@ -3,7 +3,7 @@
 import math
 import numpy as np
 import pytest
-from japtools.effect_sizes import cohens_d, cohens_f2, r2_effect, partial_eta_squared
+from apastats.effect_sizes import cohens_d, cohens_f2, r2_effect, partial_eta_squared
 
 
 class TestCohensD:

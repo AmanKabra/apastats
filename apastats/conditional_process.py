@@ -34,7 +34,7 @@ import pandas as pd
 import statsmodels.api as sm
 from scipy import stats as sp_stats
 
-from japtools.formatting import (
+from apastats.formatting import (
     fmt_number,
     fmt_p,
     fmt_r2,

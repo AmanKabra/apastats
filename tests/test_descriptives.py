@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.descriptives import descriptives_table, cronbach_alpha
+from apastats.descriptives import descriptives_table, cronbach_alpha
 
 
 @pytest.fixture

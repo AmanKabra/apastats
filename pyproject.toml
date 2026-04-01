@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "japtools"
+name = "apastats"
 version = "0.1.0"
 description = "APA 7th edition compliant statistical tables and analyses for organizational science research, following Journal of Applied Psychology (JAP) norms."
 readme = "README.md"
@@ -40,4 +40,4 @@ dev = ["pytest>=7.0", "pytest-cov", "python-docx>=1.0", "semopy>=2.3", "factor_a
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["japtools*"]
+include = ["apastats*"]

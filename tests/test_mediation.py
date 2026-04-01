@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.mediation import mediation_analysis
+from apastats.mediation import mediation_analysis
 
 
 @pytest.fixture

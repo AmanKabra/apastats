@@ -4,7 +4,7 @@ import math
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.reliability import scale_reliability
+from apastats.reliability import scale_reliability
 
 
 @pytest.fixture

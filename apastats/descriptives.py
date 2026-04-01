@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from japtools.formatting import (
+from apastats.formatting import (
     fmt_number,
     fmt_correlation,
     significance_stars,
@@ -321,7 +321,7 @@ def descriptives_table(
     Examples
     --------
     >>> import pandas as pd, numpy as np
-    >>> from japtools import descriptives_table
+    >>> from apastats import descriptives_table
     >>> rng = np.random.default_rng(42)
     >>> df = pd.DataFrame({
     ...     "satisfaction": rng.normal(3.5, 0.8, 200),

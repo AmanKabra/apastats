@@ -4,7 +4,7 @@ import os
 import tempfile
 import pandas as pd
 import pytest
-from japtools.export import to_docx, to_latex, to_csv
+from apastats.export import to_docx, to_latex, to_csv
 
 
 @pytest.fixture

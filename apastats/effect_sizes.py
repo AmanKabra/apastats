@@ -22,7 +22,7 @@ from typing import Optional
 import numpy as np
 from scipy import stats as sp_stats
 
-from japtools.formatting import fmt_number, fmt_ci
+from apastats.formatting import fmt_number, fmt_ci
 
 
 # ═══════════════════════════════════════════════════════════════════════════

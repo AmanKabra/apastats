@@ -41,7 +41,7 @@ from scipy import stats as sp_stats
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 
-from japtools.formatting import (
+from apastats.formatting import (
     fmt_number,
     fmt_p,
     fmt_r2,
@@ -146,7 +146,7 @@ class ModerationResult:
 
     def report(self) -> str:
         """Return copy-paste APA in-text strings for the moderation analysis."""
-        from japtools.formatting import (
+        from apastats.formatting import (
             report_regression_coeff, report_model_fit,
             report_r2_change, report_simple_slope,
         )

@@ -38,7 +38,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-from japtools.formatting import (
+from apastats.formatting import (
     fmt_number,
     fmt_p,
     fmt_ci,
@@ -132,7 +132,7 @@ class MediationResult:
 
     def report(self) -> str:
         """Return copy-paste APA in-text strings for the mediation analysis."""
-        from japtools.formatting import (
+        from apastats.formatting import (
             report_regression_coeff, report_indirect_effect,
         )
         lines: list[str] = []

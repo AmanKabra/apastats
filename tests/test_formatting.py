@@ -2,7 +2,7 @@
 
 import math
 import pytest
-from japtools.formatting import (
+from apastats.formatting import (
     fmt_number,
     fmt_p,
     significance_stars,

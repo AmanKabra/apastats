@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.moderation import moderation_analysis
+from apastats.moderation import moderation_analysis
 
 
 @pytest.fixture

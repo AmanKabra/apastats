@@ -2,7 +2,7 @@
 Scale reliability analysis following JAP / APA 7th edition norms.
 
 Provides:
-  - Cronbach's alpha (delegates to :func:`japtools.descriptives.cronbach_alpha`)
+  - Cronbach's alpha (delegates to :func:`apastats.descriptives.cronbach_alpha`)
   - McDonald's omega-total (from one-factor EFA loadings)
   - Composite reliability (CR)
   - Average variance extracted (AVE)
@@ -35,8 +35,8 @@ from typing import List, Optional, Sequence
 import numpy as np
 import pandas as pd
 
-from japtools.descriptives import cronbach_alpha
-from japtools.formatting import fmt_number
+from apastats.descriptives import cronbach_alpha
+from apastats.formatting import fmt_number
 
 
 # ═══════════════════════════════════════════════════════════════════════════

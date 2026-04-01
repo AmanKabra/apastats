@@ -1,21 +1,21 @@
-# japtools
+# apastats
 
 **APA 7th edition compliant statistical analyses for organizational science research.**
 
 Researchers in organizational behavior and related fields spend a disproportionate amount of time formatting statistical output to meet the strict conventions of journals like the *Journal of Applied Psychology* (JAP). Every decimal place, leading zero, significance star, and table border must follow precise APA 7th edition rules — and getting any of it wrong invites a desk reject or tedious revision. Existing tools are scattered across platforms: the PROCESS macro only runs in SPSS/SAS/R, R's `apaTables` only handles table formatting, and no Python package covers the full submission workflow from measurement validation through hypothesis testing to publication-ready output.
 
-`japtools` fills this gap. It is a Python package that produces JAP-compliant statistical tables, analyses, and figures — ready to paste into a manuscript. Built by organizational scientists for organizational scientists, it enforces APA formatting rules programmatically (no leading zeros on correlations, significance stars in tables but not in text, horizontal rules only, percentile bootstrap CIs for indirect effects) so you can focus on your research instead of your formatting. Every analysis returns both a formatted plain-text table and a structured result object with raw statistics, a `.report()` method for copy-paste in-text reporting strings, and export to Word, LaTeX, or CSV.
+`apastats` fills this gap. It is a Python package that produces JAP-compliant statistical tables, analyses, and figures — ready to paste into a manuscript. Built by organizational scientists for organizational scientists, it enforces APA formatting rules programmatically (no leading zeros on correlations, significance stars in tables but not in text, horizontal rules only, percentile bootstrap CIs for indirect effects) so you can focus on your research instead of your formatting. Every analysis returns both a formatted plain-text table and a structured result object with raw statistics, a `.report()` method for copy-paste in-text reporting strings, and export to Word, LaTeX, or CSV.
 
 ## Installation
 
 ```bash
-pip install japtools
+pip install apastats
 ```
 
 For CFA and scale reliability features, install with optional dependencies:
 
 ```bash
-pip install japtools[all]
+pip install apastats[all]
 ```
 
 ## What's Included
@@ -36,7 +36,7 @@ pip install japtools[all]
 ### Descriptives and Correlations (Table 1)
 
 ```python
-from japtools import descriptives_table
+from apastats import descriptives_table
 
 result = descriptives_table(
     data=df,
@@ -54,7 +54,7 @@ print(result)
 ### Moderation Analysis
 
 ```python
-from japtools import moderation_analysis
+from apastats import moderation_analysis
 
 result = moderation_analysis(
     data=df, x="pos", w="empowerment", y="performance",
@@ -69,7 +69,7 @@ result.plot_jn()       # Johnson-Neyman plot
 ### Mediation Analysis
 
 ```python
-from japtools import mediation_analysis
+from apastats import mediation_analysis
 
 result = mediation_analysis(
     data=df, x="pos", m="engagement", y="performance",
@@ -83,7 +83,7 @@ result.plot()          # Path diagram
 ### Conditional Process Analysis (Moderated Mediation)
 
 ```python
-from japtools import conditional_process
+from apastats import conditional_process
 
 result = conditional_process(
     data=df, x="pos", m="engagement", y="performance", w="empowerment",
@@ -96,7 +96,7 @@ print(result.report()) # Copy-paste APA strings
 ### CFA and Scale Reliability
 
 ```python
-from japtools import cfa, scale_reliability
+from apastats import cfa, scale_reliability
 
 # Scale reliability
 rel = scale_reliability(df, items=["pos1", "pos2", "pos3", "pos4"])
@@ -118,7 +118,7 @@ print(result.report()) # Copy-paste fit string
 ### Exporting to Word
 
 ```python
-from japtools import descriptives_table, to_docx
+from apastats import descriptives_table, to_docx
 
 result = descriptives_table(df, variables=["pos", "commitment", "performance"])
 to_docx(
@@ -144,7 +144,7 @@ to_docx(
 ## Running Tests
 
 ```bash
-pip install japtools[dev]
+pip install apastats[dev]
 pytest tests/ -v
 ```
 

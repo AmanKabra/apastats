@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.conditional_process import conditional_process
+from apastats.conditional_process import conditional_process
 
 
 @pytest.fixture

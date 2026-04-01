@@ -1,5 +1,5 @@
 """
-japtools — APA 7th edition compliant statistical analyses for organizational science.
+apastats — APA 7th edition compliant statistical analyses for organizational science.
 
 Provides:
   - Descriptive statistics and intercorrelation tables (JAP "Table 1")
@@ -11,14 +11,14 @@ Provides:
 
 __version__ = "0.1.0"
 
-from japtools.descriptives import descriptives_table
-from japtools.moderation import moderation_analysis
-from japtools.mediation import mediation_analysis
-from japtools.effect_sizes import cohens_d, cohens_f2, r2_effect, partial_eta_squared
-from japtools.export import to_docx, to_latex, to_csv
-from japtools.conditional_process import conditional_process
-from japtools.reliability import scale_reliability
-from japtools.cfa import cfa
+from apastats.descriptives import descriptives_table
+from apastats.moderation import moderation_analysis
+from apastats.mediation import mediation_analysis
+from apastats.effect_sizes import cohens_d, cohens_f2, r2_effect, partial_eta_squared
+from apastats.export import to_docx, to_latex, to_csv
+from apastats.conditional_process import conditional_process
+from apastats.reliability import scale_reliability
+from apastats.cfa import cfa
 
 __all__ = [
     "descriptives_table",

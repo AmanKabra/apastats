@@ -1,5 +1,5 @@
 """
-japtools — Example Usage
+apastats — Example Usage
 ========================
 
 Demonstrates the three main analyses in a realistic OB research scenario:
@@ -19,7 +19,7 @@ import matplotlib
 matplotlib.use("Agg")  # non-interactive backend for scripting
 import matplotlib.pyplot as plt
 
-from japtools import descriptives_table, moderation_analysis, mediation_analysis
+from apastats import descriptives_table, moderation_analysis, mediation_analysis
 
 
 # ─── Simulate realistic survey data ──────────────────────────────────────

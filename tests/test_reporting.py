@@ -3,15 +3,15 @@
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.formatting import (
+from apastats.formatting import (
     report_regression_coeff,
     report_model_fit,
     report_r2_change,
     report_indirect_effect,
     report_simple_slope,
 )
-from japtools.moderation import moderation_analysis
-from japtools.mediation import mediation_analysis
+from apastats.moderation import moderation_analysis
+from apastats.mediation import mediation_analysis
 
 
 class TestReportRegressionCoeff:

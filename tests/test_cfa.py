@@ -4,7 +4,7 @@ import math
 import numpy as np
 import pandas as pd
 import pytest
-from japtools.cfa import cfa, FitIndices
+from apastats.cfa import cfa, FitIndices
 
 
 @pytest.fixture

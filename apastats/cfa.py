@@ -39,7 +39,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats as sp_stats
 
-from japtools.formatting import fmt_number, fmt_p, fmt_ci, fmt_r2
+from apastats.formatting import fmt_number, fmt_p, fmt_ci, fmt_r2
 
 
 # ═══════════════════════════════════════════════════════════════════════════
