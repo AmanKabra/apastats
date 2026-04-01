@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apastats"
-version = "0.1.6"
+version = "0.2.0"
 description = "APA 7th edition compliant statistical analyses for organizational science. Transparent defaults, complete parameter reporting, publication-ready output."
 readme = "README.md"
 license = "MIT"
@@ -35,8 +35,14 @@ docx = ["python-docx>=1.0"]
 cfa = ["semopy>=2.3"]
 reliability = ["factor_analyzer>=0.5"]
 all = ["python-docx>=1.0", "semopy>=2.3", "factor_analyzer>=0.5"]
-dev = ["pytest>=7.0", "pytest-cov", "python-docx>=1.0", "semopy>=2.3", "factor_analyzer>=0.5"]
+dev = ["pytest>=7.0", "pytest-cov", "pingouin>=0.5", "python-docx>=1.0", "semopy>=2.3", "factor_analyzer>=0.5"]
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["apastats*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: Monte Carlo tests (deselect with '-m not slow')",
+]

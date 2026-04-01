@@ -9,7 +9,7 @@ Provides:
   - APA-formatted export to Word (.docx), LaTeX, and CSV
 """
 
-__version__ = "0.1.6"
+__version__ = "0.2.0"
 
 from apastats.descriptives import descriptives_table
 from apastats.moderation import moderation_analysis

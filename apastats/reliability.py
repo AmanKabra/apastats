@@ -104,6 +104,11 @@ def _one_factor_loadings(item_scores: np.ndarray) -> np.ndarray:
     Falls back to a correlation-based approach if factor_analyzer is not
     available.
     """
+    # Check for zero-variance items (e.g., all identical responses)
+    item_vars = np.var(item_scores, axis=0, ddof=1)
+    if np.any(item_vars == 0):
+        return np.full(item_scores.shape[1], np.nan)
+
     try:
         from factor_analyzer import FactorAnalyzer
         fa = FactorAnalyzer(n_factors=1, method="principal", rotation=None)
