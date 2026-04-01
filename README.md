@@ -4,7 +4,7 @@
 
 Python is increasingly the language of choice for analytical pipelines across the social sciences. Yet no Python package exists for the statistical reporting conventions required by journals in organizational behavior and adjacent fields, such as the *Journal of Applied Psychology*. Researchers who work in Python are forced to piece together output from general purpose libraries and reformat manually, or abandon Python entirely and switch to SPSS or R for final reporting. `apastats` closes this gap: it is a purpose built Python package that runs the standard analyses organizational scholars need and produces publication ready output in a single step.
 
-A second, deeper problem motivates this package: the absence of transparency in analytical defaults. Statistical software routinely applies consequential settings silently. The number of bootstrap resamples, the type of confidence interval (percentile vs. bias corrected), whether variables are mean centered, which estimator is used: these choices shape results, yet most tools bury them in undocumented defaults. When researchers do not report these settings, readers cannot evaluate whether the reported findings would hold under alternative, equally defensible specifications. Treating one set of assumptions as interchangeable with another is not a minor reporting omission; it is a threat to the credibility of cumulative science. `apastats` addresses this by printing all parameter settings alongside every analysis output, making methods sections complete by construction rather than by the researcher's diligence.
+The tooling gap is compounded by a transparency problem. Statistical software routinely applies consequential settings silently. The number of bootstrap resamples, the type of confidence interval (percentile vs. bias corrected), whether variables are mean centered, which estimator is used: these choices shape results, yet most tools bury them in undocumented defaults. When researchers do not report these settings, readers cannot evaluate whether the reported findings would hold under alternative, equally defensible specifications. Treating one set of assumptions as interchangeable with another is not a minor reporting omission; it is a threat to the credibility of cumulative science. `apastats` addresses this by printing all parameter settings alongside every analysis output, making methods sections complete by construction rather than by the researcher's diligence.
 
 Third, a disproportionate share of researcher time goes to formatting rather than thinking. Every decimal place, leading zero, significance star, and table border in an APA 7th edition manuscript must follow precise rules, and deviations invite revision requests or desk rejection. `apastats` enforces these rules programmatically. Every analysis returns a formatted plain text table, a structured result object with raw statistics, a `.report()` method that generates copy paste in text reporting strings, and direct export to Word, LaTeX, or CSV. The goal is simple: researchers should spend their time on content, not on counting decimal places.
 
@@ -16,7 +16,7 @@ Third, a disproportionate share of researcher time goes to formatting rather tha
 
 If you use `apastats` in published research, please cite it as:
 
-> Kabra, A. (2026). *apastats: APA 7th edition compliant statistical analyses for organizational science* (Version 0.1.3) [Computer software]. https://github.com/AmanKabra/apastats
+> Kabra, A. (2026). *apastats: APA 7th edition compliant statistical analyses for organizational science* (Version 0.1.5) [Computer software]. https://github.com/AmanKabra/apastats
 
 BibTeX:
 
@@ -26,7 +26,7 @@ BibTeX:
   title = {apastats: APA 7th Edition Compliant Statistical Analyses for Organizational Science},
   year = {2026},
   url = {https://github.com/AmanKabra/apastats},
-  version = {0.1.3}
+  version = {0.1.5}
 }
 ```
 
@@ -46,11 +46,11 @@ pip install apastats[all]
 
 | Module | What it does |
 |---|---|
-| **Descriptives** | JAP "Table 1" — means, SDs, lower-triangular correlations, Cronbach's alpha on the diagonal, significance stars |
+| **Descriptives** | JAP "Table 1": means, SDs, lower triangular correlations, Cronbach's alpha on the diagonal, significance stars |
 | **Moderation** | Hierarchical regression, simple slopes at +/-1 SD, Johnson-Neyman regions of significance, interaction plots |
 | **Mediation** | Bootstrap indirect effects (10,000 resamples), single and parallel mediators, path diagrams |
 | **Conditional Process** | Moderated mediation (PROCESS Models 7, 8, 14, 15), index of moderated mediation with bootstrap CI |
-| **CFA** | Confirmatory factor analysis via semopy — fit indices (chi-sq, CFI, TLI, RMSEA with 90% CI, SRMR), standardised loadings, CR, AVE, Fornell-Larcker, HTMT |
+| **CFA** | Confirmatory factor analysis via semopy. Fit indices (chi sq, CFI, TLI, RMSEA with 90% CI, SRMR), standardised loadings, CR, AVE, Fornell Larcker, HTMT |
 | **Scale Reliability** | Cronbach's alpha, McDonald's omega, composite reliability, AVE, corrected item-total correlations, alpha-if-deleted |
 | **Effect Sizes** | Cohen's d (with CI), f-squared, R-squared interpretation, partial eta-squared |
 | **Export** | APA-formatted Word (.docx), LaTeX (booktabs), CSV |
@@ -69,7 +69,7 @@ result = descriptives_table(
     alphas={
         "pos": ["pos_item1", "pos_item2", "pos_item3"],
         "commitment": 0.91,
-        # age has no alpha — em-dash on diagonal
+        # age has no alpha, so the diagonal shows an em dash
     },
 )
 print(result)

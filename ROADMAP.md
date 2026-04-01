@@ -14,7 +14,7 @@ Planned features for future releases, roughly in priority order.
 - Relative importance of predictors accounting for multicollinearity (Johnson, 2000)
 - Dominance analysis (Budescu, 1993)
 - APA-formatted importance tables
-- Rationale: frequent reviewer ask — "which predictor matters most?"
+- Rationale: frequent reviewer ask, "which predictor matters most?"
 
 ### Multilevel / HLM Module
 - ICC(1) and ICC(2) calculations

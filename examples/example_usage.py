@@ -1,11 +1,11 @@
 """
-apastats — Example Usage
+apastats: Example Usage
 ========================
 
 Demonstrates the three main analyses in a realistic OB research scenario:
   1. Descriptives + correlations table (JAP "Table 1")
-  2. Moderation analysis (X × W → Y) with interaction plot & Johnson–Neyman
-  3. Mediation analysis (X → M → Y) with path diagram
+  2. Moderation analysis (X x W -> Y) with interaction plot and Johnson Neyman
+  3. Mediation analysis (X -> M -> Y) with path diagram
 
 Scenario: A study of N = 400 employees examining how perceived
 organisational support (POS) predicts job performance, with
@@ -124,7 +124,7 @@ for ss in mod.simple_slopes:
     )
 print()
 
-# Johnson–Neyman boundaries
+# Johnson Neyman boundaries
 if mod.jn and mod.jn.boundaries:
     for bnd in mod.jn.boundaries:
         print(f"  J-N boundary (centred): {bnd:.3f}")
