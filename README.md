@@ -32,13 +32,13 @@ BibTeX:
 ## Installation
 
 ```bash
-pip install apastats
+pip install git+https://github.com/AmanKabra/apastats.git
 ```
 
 For CFA and scale reliability features, install with optional dependencies:
 
 ```bash
-pip install apastats[all]
+pip install "apastats[all] @ git+https://github.com/AmanKabra/apastats.git"
 ```
 
 ## What's Included
