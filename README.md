@@ -169,10 +169,11 @@ to_docx(
 
 ```bash
 pip install apastats[dev]
-pytest tests/ -v
+pytest tests/ -m "not slow" -v   # fast suite (~60 seconds)
+pytest tests/ -v                 # full suite including Monte Carlo (~5 minutes)
 ```
 
-191 tests covering all modules, edge cases, and APA formatting rules.
+320 tests across a five layer protocol: ground truth validation, cross package concordance, Monte Carlo statistical properties, edge case robustness, and APA formatting compliance. See [TESTING.md](TESTING.md) for the full protocol.
 
 ## License
 
