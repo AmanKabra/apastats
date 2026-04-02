@@ -16,7 +16,7 @@ Third, a disproportionate share of researcher time goes to formatting rather tha
 
 If you use `apastats` in published research, please cite it as:
 
-> Kabra, A. (2026). *apastats: APA 7th edition compliant statistical analyses for organizational science* (Version 0.2.0) [Computer software]. https://github.com/AmanKabra/apastats
+> Kabra, A. (2026). *apastats: APA 7th edition compliant statistical analyses for organizational science* [Computer software]. https://github.com/AmanKabra/apastats
 
 BibTeX:
 
@@ -25,8 +25,7 @@ BibTeX:
   author = {Kabra, Aman},
   title = {apastats: APA 7th Edition Compliant Statistical Analyses for Organizational Science},
   year = {2026},
-  url = {https://github.com/AmanKabra/apastats},
-  version = {0.2.0}
+  url = {https://github.com/AmanKabra/apastats}
 }
 ```
 

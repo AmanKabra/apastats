@@ -32,7 +32,7 @@ class TestVersionConsistency:
         text = CITATION.read_text(encoding="utf-8")
         # Match "version: X.Y.Z" but not "cff-version: X.Y.Z"
         matches = re.findall(r"^version:\s*(.+)", text, re.MULTILINE)
-        return matches[0].strip() if matches else None
+        return matches[0].strip() if matches else None  # None = version intentionally omitted
 
     def test_init_matches_pyproject(self):
         assert apastats.__version__ == self._extract_version_pyproject(), (
@@ -40,12 +40,14 @@ class TestVersionConsistency:
             f"pyproject.toml says {self._extract_version_pyproject()}"
         )
 
-    def test_citation_matches_pyproject(self):
+    def test_citation_version_omitted_or_matches(self):
+        """CITATION.cff should either omit version (preferred) or match pyproject."""
         pyproject_ver = self._extract_version_pyproject()
         citation_ver = self._extract_version_citation()
-        assert citation_ver == pyproject_ver, (
-            f"CITATION.cff says {citation_ver}, pyproject.toml says {pyproject_ver}"
-        )
+        if citation_ver is not None:
+            assert citation_ver == pyproject_ver, (
+                f"CITATION.cff says {citation_ver}, pyproject.toml says {pyproject_ver}"
+            )
 
 
 class TestReadmeTestCount:
