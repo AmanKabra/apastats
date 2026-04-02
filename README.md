@@ -6,7 +6,7 @@ Python is increasingly the language of choice for analytical pipelines across th
 
 The tooling gap is compounded by a transparency problem. Statistical software routinely applies consequential settings silently. The number of bootstrap resamples, the type of confidence interval (percentile vs. bias corrected), whether variables are mean centered, which estimator is used: these choices shape results, yet most tools bury them in undocumented defaults. When researchers do not report these settings, readers cannot evaluate whether the reported findings would hold under alternative, equally defensible specifications. Treating one set of assumptions as interchangeable with another is not a minor reporting omission; it is a threat to the credibility of cumulative science. `apastats` addresses this by printing all parameter settings alongside every analysis output, making methods sections complete by construction rather than by the researcher's diligence.
 
-Third, a disproportionate share of researcher time goes to formatting rather than thinking. Every decimal place, leading zero, significance star, and table border in an APA 7th edition manuscript must follow precise rules, and deviations invite revision requests or desk rejection. `apastats` enforces these rules programmatically. Every analysis returns a formatted plain text table, a structured result object with raw statistics, a `.report()` method that generates copy paste in text reporting strings, and direct export to Word, LaTeX, or CSV. The goal is simple: researchers should spend their time on content, not on counting decimal places.
+Third, a disproportionate share of researcher time goes to formatting rather than thinking. Every decimal place, leading zero, significance star, and table border in an APA 7th edition manuscript must follow precise rules, and deviations invite revision requests or desk rejection. `apastats` enforces these rules programmatically. Every analysis returns a formatted plain text table, a structured result object with raw statistics, a `.report()` method that generates copy paste in text reporting strings, and direct export to Word or CSV. The goal is simple: researchers should spend their time on content, not on counting decimal places.
 
 ## Disclaimer
 
@@ -53,7 +53,7 @@ pip install apastats[all]
 | **CFA** | Confirmatory factor analysis via semopy. Fit indices (chi sq, CFI, TLI, RMSEA with 90% CI, SRMR), standardised loadings, CR, AVE, Fornell Larcker, HTMT |
 | **Scale Reliability** | Cronbach's alpha, McDonald's omega, composite reliability, AVE, corrected item-total correlations, alpha-if-deleted |
 | **Effect Sizes** | Cohen's d (with CI), f-squared, R-squared interpretation, partial eta-squared |
-| **Export** | APA-formatted Word (.docx), LaTeX (booktabs), CSV |
+| **Export** | APA-formatted Word (.docx), CSV |
 
 ## Quick Start
 

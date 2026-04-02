@@ -60,7 +60,7 @@ class DescriptivesResult:
         Ready-to-use APA-formatted plain-text table.
     table_df : pd.DataFrame
         Machine-readable DataFrame of the formatted table (useful for
-        export to Word / LaTeX).
+        export to Word / CSV).
     """
 
     means: pd.Series

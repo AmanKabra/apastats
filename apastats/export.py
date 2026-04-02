@@ -1,5 +1,5 @@
 """
-APA 7th edition table export to Word (.docx), LaTeX, and CSV.
+APA 7th edition table export to Word (.docx) and CSV.
 
 Word tables follow APA formatting:
   - Times New Roman, 12pt body, 10pt notes
@@ -200,74 +200,6 @@ def to_docx(
     doc.save(filepath)
     return filepath
 
-
-# ═══════════════════════════════════════════════════════════════════════════
-# LaTeX export
-# ═══════════════════════════════════════════════════════════════════════════
-
-def to_latex(
-    table_df: pd.DataFrame,
-    title: str = "Table 1",
-    subtitle: str = "",
-    note: str = "",
-    label: str = "tab:table1",
-) -> str:
-    """Export a DataFrame as a LaTeX table using ``booktabs``.
-
-    Returns the LaTeX source as a string (also suitable for writing
-    to a ``.tex`` file).
-
-    Parameters
-    ----------
-    table_df : pd.DataFrame
-    title : str
-        Table number.
-    subtitle : str
-        Table caption.
-    note : str
-        Table footnote.
-    label : str
-        LaTeX label for cross-references.
-
-    Returns
-    -------
-    str
-        LaTeX source.
-    """
-    n_cols = len(table_df.columns)
-    # First column left-aligned, rest right-aligned
-    col_spec = "l" + "r" * (n_cols - 1)
-
-    lines: list[str] = []
-    lines.append("\\begin{table}[htbp]")
-    lines.append("\\centering")
-    caption = subtitle if subtitle else title
-    lines.append(f"\\caption{{{caption}}}")
-    lines.append(f"\\label{{{label}}}")
-    lines.append(f"\\begin{{tabular}}{{{col_spec}}}")
-    lines.append("\\toprule")
-
-    # Header
-    header = " & ".join(table_df.columns)
-    lines.append(f"{header} \\\\")
-    lines.append("\\midrule")
-
-    # Data
-    for _, row in table_df.iterrows():
-        vals = " & ".join(str(v) for v in row.values)
-        lines.append(f"{vals} \\\\")
-
-    lines.append("\\bottomrule")
-    lines.append("\\end{tabular}")
-
-    if note:
-        # Escape underscores, ampersands for LaTeX
-        note_escaped = note.replace("_", "\\_").replace("&", "\\&")
-        lines.append(f"\\\\[2pt]")
-        lines.append(f"\\footnotesize{{{note_escaped}}}")
-
-    lines.append("\\end{table}")
-    return "\n".join(lines)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
