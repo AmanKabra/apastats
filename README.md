@@ -1,6 +1,6 @@
 # apastats
 
-**APA 7th edition compliant statistical analyses for organizational science research.**
+**APA 7th edition compliant statistical analyses for organizational science research. Think Stata, but open source, in Python, and APA formatted for publication out of the box.**
 
 Python is increasingly the language of choice for analytical pipelines across the social sciences. Yet no Python package exists for the statistical reporting conventions required by journals in organizational behavior and adjacent fields, such as the *Journal of Applied Psychology*. Researchers who work in Python are forced to piece together output from general purpose libraries and reformat manually, or abandon Python entirely and switch to SPSS or R for final reporting. `apastats` closes this gap: it is a purpose built Python package that runs the standard analyses organizational scholars need and produces publication ready output in a single step.
 
